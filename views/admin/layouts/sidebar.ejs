@@ -1,0 +1,156 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar elevation-4" style="background-color: #264e58;">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+        <img src="<%= img.url %>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            style="opacity: .8">
+        <span class="brand-text font-weight-light" style="color: #95c3c2;">
+            <%= n %>
+        </span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="<%= img.url %>" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block" style="color: #95c3c2;">
+                    <%= n %>
+                </a>
+            </div>
+        </div>
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i style="color: #95c3c2;" class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+       with font-awesome or any other icon font library -->
+                <% if(role=='admin' ){ %>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" style="background-color: #4dbcd7;">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Student
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/admin/addstudent" class="nav-link active" style="background-color: #4dbcd7;">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add Student</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" style="background-color: #4dbcd7;">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                complaint
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/displaycomplaint" class="nav-link active" style="background-color: #4dbcd7;">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>display complaint</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" style="background-color: #4dbcd7;">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                course
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/addcourse" class="nav-link active" style="background-color: #4dbcd7;">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>add course</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <% } %>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="background-color: #4dbcd7;">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Profile
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/changepassword" class="nav-link active"
+                                        style="background-color: #4dbcd7;">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>change password</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/profile" class="nav-link active" style="background-color: #4dbcd7;">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>profile update</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <% if(role=='student'){ %>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="background-color: #4dbcd7;">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Complaint
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/addcomplaint" class="nav-link active"
+                                        style="background-color: #4dbcd7;">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>complaint</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <% } %>
+                        <li class="nav-item">
+                            <a href="/logout" class="nav-link" style="color: #95c3c2;">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Logout
+                                </p>
+                            </a>
+                        </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

@@ -1,0 +1,214 @@
+<%-include('./header.ejs') %>
+
+    <% if(msg.length>0){%>
+        <div class="alert alert-danger">
+            <%= msg %>
+        </div>
+        <% } %>
+            <!--carousel start-->
+            <div class="container-fluid p-0">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="image/banner3.webp" class="d-block w-100" alt="banner1" style="height: 450px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/banner1.jpeg" class="d-block w-100" alt="banner2" style="height: 450px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!--carousel end-->
+
+
+            <!--Redersal system start-->
+
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <h1 class="text-center heading">
+                            <span style="color: #95c3c2;">Why</span>
+                            Grievance Redressal System?
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p class="paragraph">
+                                The Grievance Redressal Cell has been developed to settle the grievances of the students
+                                and
+                                other stakeholders within a reasonable time period for
+                                further strengthening the bond of the students with the institution by providing them
+                                with all
+                                kind of
+                                facilities to a satisfaction level for maintaining a convenient ambience of academic
+                                teaching
+                                and learning.
+                                <br>
+                                A grievance redressal system is a process to address employee grievances, and it can be
+                                defined
+                                as a mechanism that enables employees to communicate their concerns to management. The
+                                grievance
+                                redressal system helps in resolving employees’ grievances in a formal manner which may
+                                be
+                                between an employee to employee or either between employee and management.
+                                For an organization to function effectively, it is important that the employees are
+                                satisfied
+                                and happy about their job. Upon dissatisfaction with the response they receive, they can
+                                go
+                                higher up the chain until they finally reach someone who will listen to them.
+                            </p>
+                        </div>
+                        <div class="col-md-5 zoom">
+                            <img src="image/grievance system.png" class="w-100 IMG">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="paragraph2">
+                            colleges through effective tracking and monitoring of grievances ensuring prompt redressal.
+                            This
+                            portal for online
+                            registration and disposal of grievances help users obtain immediate response and resolution
+                            to their
+                            grievances from the institution itself
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid mb-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 item2 mr-1">
+                            <div class="d-flex flex-column text-center shadow-lg item1">
+                                <a href="" class="icon"><i class="fa-solid fa-user"></i></a>
+                                <h3>Student</h3>
+                                <P>Student can manage and view their grivance here...</P>
+                                <button type="button" class="btn btn-info text-white button" data-bs-target="#login"
+                                    data-bs-toggle="modal">Login</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 item2 mr-1">
+                            <div class="d-flex flex-column text-center shadow-lg item1">
+                                <a href="" class="icon"><i class="fa-sharp fa-solid fa-user-tie"></i></a>
+                                <h3>Dean/Principal</h3>
+                                <P>This Section is Managed By the Dean of AY college</P>
+                                <button type="button" class="btn btn-info text-white button" data-bs-target="#Principal"
+                                    data-bs-toggle="modal">Login</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 item2">
+                            <div class="d-flex flex-column text-center shadow-lg item1">
+                                <a href="" class="icon"><i class="fa-sharp fa-solid fa-chalkboard-user"></i></a>
+                                <h3>Handler & Admin</h3>
+                                <P> this Section is managed and view by the Grievance handler.</P>
+                                <button type="button" class="btn btn-info text-white button" data-bs-target="#admin"
+                                    data-bs-toggle="modal">Login</button>
+                            </div>
+                        </div>
+                    </div><!--row end-->
+                </div><!--container- end-->
+            </div><!--container-fluid end-->
+
+            <!-------------login section end---------------->
+            <br> <br>
+
+            <!--banner image-->
+            <div class="container-fluid m-0 p-0">
+                <img src="image/banner5.jpeg" class="w-100" alt="banner5">
+            </div>
+            <!--banner image end-->
+
+            <!-- Button trigger modal -->
+
+            <!-- student Modal -->
+            <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="login">Student Login</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/verifylogin" method="post">
+                                <div class="mb-3">
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--principal modal-->
+            <div class="modal fade" id="Principal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="Principal">Principal Login</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/verifylogin" method="post">
+                                <div class="mb-3">
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="form-control" required>
+                                </div>
+                                <button class="btn btn-success"> Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--admin modal-->
+            <div class="modal fade" id="admin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="admin">admin Login</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/verifylogin" method="post">
+                                <div class="mb-3">
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-success"> Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <%-include('./footer.ejs')%>

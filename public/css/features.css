@@ -1,0 +1,116 @@
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #656565;
+    background-color: #F3F3F3;
+}
+/*margin right*/
+.mr-2{
+    margin-right: 0.5rem !important; 
+}
+@media (min-width: 992px){
+    .text-lg-left{
+        text-align: left !important;
+    }
+}
+@media (min-width: 992px){
+    .text-lg-right{
+        text-align: right !important;
+    }
+}
+/*anchor tag*/
+.a{
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+/*background color*/
+.text-primary{
+    color: #264e58 !important;
+}
+/*font color*/
+.title{
+    color: #95c3c2;
+}
+.ml-auto{
+    margin-left: auto !important;
+} 
+/*navigation title*/
+@media (max-width: 576px){
+    nav .container h1{
+        font-size: 28px !important;
+    }
+}
+/*features heading*/
+.heading{
+    padding-top: 25px;
+    color: #264e58;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.udline{
+    width: 100%;
+    max-width: 200px;
+    background: #95c3c2;
+    height: 4px;
+}
+/*features paragraph*/
+.paragraph{
+    padding-top: 30px;
+    color: #264e58;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 19px;
+    padding-right: 30px;
+    text-align: justify;
+}
+.paragraph2{
+    padding-top: 12px;
+    color: #264e58;
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 19px;
+}
+/*ul*/
+.list1{
+    margin-top: 10px;
+    padding-left: 18px !important;
+}
+.list1 li{
+    list-style: circle;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 16px;
+}
+/* .IMG{
+    border: 2px solid whitesmoke;
+    border-radius: 22px;
+    margin-top: 32px;
+} */
+@media (max-width:576px){
+    .col-md-7 p {
+        text-align: center;
+        padding-right: 0px;
+    }
+    .container .row .paragraph2{
+        text-align: center;
+    }
+}
+/*footer and modal*/
+.item1{
+    background-color: #264e58;
+    padding: 20px;
+    color: #95c3c2;
+}
+.item2{
+    padding: 10px;
+}
+/*icons*/
+.icon{
+    font-size: 100px;
+    color: #95c3c2
+}

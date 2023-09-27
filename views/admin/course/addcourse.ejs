@@ -1,0 +1,87 @@
+<%-include('../layouts/header.ejs')%>
+<%-include('../layouts/sidebar.ejs')%>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <div class="content">
+  
+          <!-- /.card -->
+  
+          <div class="card">
+            <div class="card-header d-flex justify-content-between">
+              <h3 class="card-title" style="line-height: 40px;"> Display course</h3>
+              <button type="button" class="btn btn-info ml-auto" data-toggle="modal" data-target="#addcourse">
+               Add course
+              </button> 
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>course</th>
+                    <th>action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% i=1 %>
+                <% o.forEach((item)=>{ %>
+                  <tr>
+                    <td><%= i++ %></td>
+                      <td><%= item.cname %></td>
+                      <td>
+                        <a href="/course/courseview/<%= item._id %>" class="btn btn-info">view</a>
+                        <a href="/course/courseedit/<%= item._id %>" class="btn btn-success">Edit</a>
+                        <a href="/course/coursedelete/<%= item._id %>" class="btn btn-danger">delete</a>
+                      </td>
+                    </tr>
+                 <% }) %>
+                  
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>S.No</th>
+                    <th>course</th>
+                    <th>action</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!--modal start-->
+          <div class="modal fade" id="addcourse">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Add course</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/courseinsert" method="post" enctype="multipart/form-data" required>
+                    <div class="form-group">
+                      <label>course</label>
+                      <input type="text" name="cname" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">submit</button>
+                  </form>
+                </div>
+              </div>
+              <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+          </div>
+          <!--modal end -->
+  
+          <!-- /.card -->
+        </div>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+  
+<%- include('../layouts/footer.ejs')%>

@@ -1,0 +1,85 @@
+<%-include('../admin/layouts/header.ejs') %>
+
+    <%-include('../admin/layouts/sidebar.ejs') %>
+
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            <div class="content">
+
+                <!-- /.card -->
+
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3 class="card-title" style="line-height: 40px;"> Display student</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Name</th>
+                                    <th>complaint type</th>
+                                    <th>subject</th>
+                                    <th>complaint detail</th>
+                                    <th>status</th>
+                                    <th>comment</th>
+                                    <th></th>
+                                    <th>action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% i=1 %>
+                                <% c.forEach((item)=>{%>
+                                    <tr>
+                                        <td><%= i++ %></td>
+                                        <td><%= item.name %></td>
+                                        <td><%= item.ctype %></td>
+                                        <td><%= item.subject %></td>
+                                        <td><%= item.cdetail %></td>
+                                        <td><%= item.status %></td>
+                                        <td>
+                                        <form action="/updatestatus/<%= item._id%>" method="post">
+                                            <textarea name="comment" id=""></textarea>
+                                            <input type="hidden" name="name" value="<%= item.name %>">
+                                            <input type="hidden" name="email" value="<%=item.email %>">
+                                        </td>
+                                        <td>
+                                            <button type="submit" name="status" class="btn btn-info" value="Solved">solved</button>
+                                            <button type="submit" name="status" class="btn btn-danger" value="Rejected">rejected</button>
+                                        </form>
+                                        </td>
+                                        <td>
+                                            <a href="/complaint/complaintview/<%= item._id %>" class="btn btn-info">view</a>
+                                            <a href="/complaint/complaintdelete/<%= item._id %>"class="btn btn-danger">delete</a>
+                                        </td>
+                                    </tr>
+                                <%})%>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Name</th>
+                                    <th>complaint type</th>
+                                    <th>subject</th>
+                                    <th>complaint detail</th>
+                                    <th>status</th>
+                                    <th>comment</th>
+                                    <th></th>
+                                    <th>action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <%-include('../admin/layouts/footer.ejs') %>
