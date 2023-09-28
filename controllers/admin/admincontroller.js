@@ -1,4 +1,4 @@
-const AdminModel = require("../../modals/admin")
+const AdminModel = require("../../modals/Admin")
 const bcrypt = require('bcrypt')
 const ComplaintModel = require("../../modals/complaint")
 
